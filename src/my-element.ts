@@ -1,6 +1,7 @@
-import { LitElement, css, html } from 'lit'
+import { LitElement, css, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import litLogo from './assets/lit.svg'
+import globalStyles from './index.css?inline'
 
 /**
  * An example element.
@@ -46,7 +47,7 @@ export class MyElement extends LitElement {
     this.count++
   }
 
-  static styles = css`
+  static styles = [unsafeCSS(globalStyles), css`
     :host {
       max-width: 1280px;
       margin: 0 auto;
@@ -115,7 +116,7 @@ export class MyElement extends LitElement {
         background-color: #f9f9f9;
       }
     }
-  `
+  `]
 }
 
 declare global {
