@@ -25,21 +25,21 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <div>
+      <div class="flex max-w-screen-xl my-0 mx-auto p-8 place-content-center">
         <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="logo" alt="Vite logo" />
+          <img src="/vite.svg" class="h-36 p-6 hover:drop-shadow-3xl" alt="Vite logo" />
         </a>
         <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
+          <img src=${litLogo} class="h-36 p-6 hover:drop-shadow-3xl-lit" alt="Lit logo" />
         </a>
       </div>
       <slot></slot>
-      <div class="card">
-        <button @click=${this._onClick} part="button">
+      <div class="p-8">
+        <button @click=${this._onClick} class="rounded-lg border border-solid border-transparent text-base bg-slate-100 dark:bg-slate-800 px-5 py-3 cursor-pointer duration-300 hover:border-violet-700">
           count is ${this.count}
         </button>
       </div>
-      <p class="read-the-docs">${this.docsHint}</p>
+      <p class="text-slate-600">${this.docsHint}</p>
     `
   }
 
@@ -55,66 +55,9 @@ export class MyElement extends LitElement {
       text-align: center;
     }
 
-    .logo {
-      height: 6em;
-      padding: 1.5em;
-      will-change: filter;
-    }
-    .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    .logo.lit:hover {
-      filter: drop-shadow(0 0 2em #325cffaa);
-    }
-
-    .card {
-      padding: 2em;
-    }
-
-    .read-the-docs {
-      color: #888;
-    }
-
-    h1 {
-      font-size: 3.2em;
-      line-height: 1.1;
-    }
-
-    a {
-      font-weight: 500;
-      color: #646cff;
-      text-decoration: inherit;
-    }
-    a:hover {
-      color: #535bf2;
-    }
-
-    button {
-      border-radius: 8px;
-      border: 1px solid transparent;
-      padding: 0.6em 1.2em;
-      font-size: 1em;
-      font-weight: 500;
-      font-family: inherit;
-      background-color: #1a1a1a;
-      cursor: pointer;
-      transition: border-color 0.25s;
-    }
-    button:hover {
-      border-color: #646cff;
-    }
     button:focus,
     button:focus-visible {
       outline: 4px auto -webkit-focus-ring-color;
-    }
-
-    @media (prefers-color-scheme: light) {
-      a:hover {
-        color: #747bff;
-      }
-      button {
-        background-color: #f9f9f9;
-      }
     }
   `]
 }
