@@ -1,13 +1,13 @@
 {
-  "name": "sample-vite-lit",
+  "name": "sample-vite-lit-tailwind",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/my-element.es.js",
+  "main": "dist/sample-vite-lit-tailwind.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/sample-vite-lit-tailwind.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"
