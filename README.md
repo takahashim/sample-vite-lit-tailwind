@@ -8,7 +8,7 @@ sample starter for Vite + Lit + TailwindCSS, based on [lit-ts](https://github.co
 npm install
 ```
 
-## use as server
+## use server in development
 
 ```
 npm run dev
