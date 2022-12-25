@@ -9,8 +9,8 @@ import globalStyles from './index.css?inline'
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-element')
-export class MyElement extends LitElement {
+@customElement('sample-element')
+export class SampleElement extends LitElement {
   /**
    * Copy for the read the docs hint.
    */
@@ -64,6 +64,6 @@ export class MyElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-element': MyElement
+    'sample-element': SampleElement
   }
 }
