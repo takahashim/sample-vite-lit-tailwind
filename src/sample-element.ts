@@ -1,6 +1,7 @@
 import { LitElement, css, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import litLogo from './assets/lit.svg'
+import viteLogo from './assets/vite.svg'
 import globalStyles from './index.css?inline'
 
 /**
@@ -27,7 +28,7 @@ export class SampleElement extends LitElement {
     return html`
       <div class="flex max-w-screen-xl my-0 mx-auto p-8 place-content-center">
         <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="h-36 p-6 hover:drop-shadow-3xl" alt="Vite logo" />
+          <img src="${viteLogo}" class="h-36 p-6 hover:drop-shadow-3xl" alt="Vite logo" />
         </a>
         <a href="https://lit.dev" target="_blank">
           <img src=${litLogo} class="h-36 p-6 hover:drop-shadow-3xl-lit" alt="Lit logo" />

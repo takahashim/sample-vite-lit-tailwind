@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "postbuild": "npx tailwindcss -i ./src/index.css -o ./dist/output.css"
   },
   "dependencies": {
     "lit": "^2.4.1"

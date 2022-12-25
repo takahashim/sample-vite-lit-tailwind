@@ -11,13 +11,6 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: /^lit/,
-      output: {
-        globals: {
-          lit: 'Lit'
-        }
-      }
     },
-    sourcemap: true
   },
 })
